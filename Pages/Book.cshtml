@@ -1,0 +1,35 @@
+﻿@page
+@model MamphoWebsite.Pages.BookModel
+@{
+    ViewData["Title"] = "Book Appointment";
+}
+
+<div style="max-width:500px; margin:auto; background:#fff0f5; padding:30px; border-radius:15px;">
+    <h1 style="color:#d63384; text-align:center;">💅 Book Your Appointment</h1>
+    <p style="text-align:center;">Mampho's Salon - Pietermaritzburg</p>
+
+    <form method="post">
+        <label>Your Name</label><br />
+        <input asp-for="NewBooking.Name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ddd;" placeholder="e.g. Palesa" /><br />
+
+        <label>Phone / WhatsApp</label><br />
+        <input asp-for="NewBooking.Phone" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ddd;" placeholder="e.g. 071 123 4567" /><br />
+
+        <label>Choose Service</label><br />
+        <select asp-for="NewBooking.Service" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ddd;">
+            <option>Full Set Nails - R250</option>
+            <option>Manicure - R150</option>
+            <option>Pedicure - R180</option>
+            <option>Hair Wash & Style - R200</option>
+            <option>Makeup - R300</option>
+        </select><br />
+
+        <label>Date</label><br />
+        <input asp-for="NewBooking.Date" type="date" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ddd;" /><br />
+
+        <label>Notes (optional)</label><br />
+        <input asp-for="NewBooking.Notes" style="width:100%; padding:10px; margin-bottom:20px; border-radius:8px; border:1px solid #ddd;" placeholder="e.g. I want pink nails" /><br />
+
+        <button type="submit" style="width:100%; background:#d63384; color:white; border:none; padding:14px; border-radius:10px; font-size:16px;">Book Now 💖</button>
+    </form>
+</div>
